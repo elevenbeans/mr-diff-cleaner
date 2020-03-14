@@ -3,11 +3,11 @@
   "version": "1.0",
   "description": "Delete annoying folder in MR diffs",
   "permissions": [
-    "activeTab",
+    "tabs",
     "storage",
     "webRequest",
-    "http://*/*/merge_requests/*",
-    "https://*/*/merge_requests/*"
+    "http://*.ctripcorp.com/*/merge_requests/*",
+    "https://*.ctripcorp.com/*/merge_requests/*"
   ],
   "icons": {
     "16": "images/remove.png",
@@ -23,8 +23,8 @@
   },
   "content_scripts": [{
     "matches": [
-        "http://*/*/merge_requests/*",
-        "https://*/*/merge_requests/*"
+        "http://*.ctripcorp.com/*/merge_requests/*",
+        "https://*.ctripcorp.com/*/merge_requests/*"
     ],
     "js": [
         "vendor/jquery.js",
