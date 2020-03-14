@@ -1,19 +1,19 @@
 {
-  "name": "Gitlab MR cleaner",
+  "name": "MR diffs cleaner",
   "version": "1.0",
-  "description": "Delete annoying folder in gitlab MR",
+  "description": "Delete annoying folder in MR diffs",
   "permissions": [
     "activeTab",
     "storage",
     "webRequest",
-    "http://*.ctripcorp.com/*/merge_requests/*",
-    "https://*.ctripcorp.com/*/merge_requests/*"
+    "http://*/*/merge_requests/*",
+    "https://*/*/merge_requests/*"
   ],
   "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
+    "16": "images/remove.png",
+    "32": "images/remove.png",
+    "48": "images/remove.png",
+    "128": "images/remove.png"
   },
   "background": {
     "scripts": [
@@ -23,8 +23,8 @@
   },
   "content_scripts": [{
     "matches": [
-        "http://*.ctripcorp.com/*/merge_requests/*",
-        "https://*.ctripcorp.com/*/merge_requests/*"
+        "http://*/*/merge_requests/*",
+        "https://*/*/merge_requests/*"
     ],
     "js": [
         "vendor/jquery.js",
